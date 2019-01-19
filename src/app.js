@@ -12,6 +12,8 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
+console.log('Application is running');
+
 const store = configureStore();
 
 const jsx = (
