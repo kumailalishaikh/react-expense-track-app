@@ -19,23 +19,9 @@ export const ExpenseList = (props) => (
     </div>
 );
 
-// HOC
-/*
-const ConnectedExpenseList = connect((state) => {
-    return {
-        expenses: state.expenses
-    };
-})(ExpenseList);
-
-export default ConnectedExpenseList;
-*/
-
-// Higher Order Component
 const mapStateToProps = (state) => {
     return {
         expenses: getVisibleExpenses(state.expenses, state.filters)
-        // filters: state.filters
-        // expenses: state.expenses
     };
 };
 
