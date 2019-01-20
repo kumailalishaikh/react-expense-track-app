@@ -2,24 +2,18 @@
 
 exports[`Should render expense list item 1`] = `
 <div>
-  <NavLink
-    activeClassName="active"
-    aria-current="page"
+  <Link
+    replace={false}
     to="/edit/1"
   >
     <h3>
       Gum
     </h3>
-  </NavLink>
+  </Link>
   <p>
-    195
-     - 
-    0
+    $1.95
+    -
+    Jan 1st, 1970
   </p>
-  <button
-    onClick={[Function]}
-  >
-    Remove
-  </button>
 </div>
 `;

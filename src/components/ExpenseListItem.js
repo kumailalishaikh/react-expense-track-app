@@ -1,16 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { removeExpense } from '../actions/expenses';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
+import numeral from 'numeral';
 
-export const ExpenseListItem = ({ dispatch, description, amount, createdAt, id }) => (
+const ExpenseListItem = ({ description, amount, createdAt, id }) => (
     <div>
-        <NavLink to={`/edit/${id}`}><h3>{description}</h3></NavLink>
-        <p>{amount} - {createdAt}</p>
-        <button onClick={() => {
-            dispatch(removeExpense({ id }));
-        }}>Remove</button>
+        <Link to={`/edit/${id}`}>
+            <h3>{description}</h3>
+        </Link>
+        <p>{numeral(amount / 100).format('$0,0.00')}
+        - 
+         {moment(createdAt).format('MMM Do, YYYY')}
+         </p>
     </div>
 );
 
-export default connect()(ExpenseListItem);
+export default ExpenseListItem;
