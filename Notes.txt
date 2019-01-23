@@ -1,1 +1,8 @@
-Expense tracking application.
+Firebase:
+    - ref() references part of database.
+    - on() does not support promises.
+    - child_removed event is fired when child item from firebase object is deleted.
+    - child_changes event is fired when child item from firebase object is changed.
+
+Firebase with redux:
+    - redux-thunk allows to create async redux actions.
