@@ -1,0 +1,20 @@
+.button {
+    font-weight: 300;
+    font-size: $font-size-large;
+    color: $light-font;
+    padding: $s-size;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background-color: #404040;
+    line-height: 1;
+    text-decoration: none;
+
+    &.button--link {
+        background: none;
+    }
+
+    &.button--secondary {
+        background-color: maroon;
+    }
+}
